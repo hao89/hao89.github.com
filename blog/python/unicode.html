@@ -24,11 +24,7 @@
           
         <h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Encoding, Decoding, Unicode-related Problems in Python 2.x and Python 3.x:</h3>
-<xmp>
-h = strlen(code)
-m = f
 
-</xmp>
 <p> I have spent two days reading tons of webpages trying to understand the unicode, encode and decode logic in both Python 2.x and Python 3.x
  The difference in Python 2.x and Python 3.x makes it even harder to understand. There are good and bad articles online. For further references. I recommend
  blogs and articles below (since I m a Chinese, so I also include bls written in Chinese...)</p>
@@ -63,8 +59,22 @@ m = f
 <h4>Official Doc</h4>
 <h5><a href=https://docs.python.org/2/howto/unicode.html>Unicode HOWTO</a></h5>
 
+<h4> About implicit decoding in Python 2.x </h4>
+<h5><a href=http://stackoverflow.com/questions/17063502/python-strings-and-str-method-encoding-and-decoding>Python strings and str() method encoding and decoding</a></h5>
+
+
 <h4>Complementory</h4>
 <h5><a href=http://blog.csdn.net/trochiluses/article/details/16825269>python 字符编码与解码——unicode、str和中文：UnicodeDecodeError: 'ascii' codec can't decode</a></h5>
+
+
+
+<p>Something that confuse me a lot at first is that I thought Unicode and UTF-8 are the same. Actually they are different. UTF-8 is comparable to ASCII, UFT-16,.etc. 
+They represent different ways of storing (encoding) strings in memory. While Unicode, in comparison, is the plaintext (明文). A character's
+unicode is a representing number of that character in the unicode world, and that's it and no more. </p>
+
+<p> If we have a unicode of a character, we can use utf-8 to encode the character and we can get the exact value we used to store that character. On the contrary,
+if we know how a character is stored in bytes, we can decode that to unicode given its encoding method ('utf-8 or 'ascii'?).
+
 
  
  </section>
